@@ -1,0 +1,53 @@
+@use './color' as *;
+@use './variables' as *;
+@mixin default-item-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 12px;
+    background-color: transparent;
+}
+
+@mixin border-linear-wrapper {
+    position: relative;
+    border: 1px solid transparent;
+    border-radius: $default-border-radius;
+    background: $black;
+    background-clip: padding-box;
+
+    &:before {
+        position: absolute;
+        top: -1px;
+        bottom: -1px;
+        left: -1px;
+        right: -1px;
+        background: $primary;
+        content: '';
+        z-index: -1;
+        border-radius: $default-border-radius;
+    }
+}
+
+@mixin underline-item-with-transition {
+    position: relative;
+    width: 100%;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 100%;
+        height: 0.1em;
+        background: $primary;
+        opacity: 1;
+        transition: opacity 300ms, transform 300ms;
+        transform: scale(0);
+        transform-origin: center;
+    }
+
+    &:hover::after,
+    &:focus::after {
+        transform: scale(1);
+    }
+}

@@ -1,0 +1,19 @@
+@use '@/app/styles/index.scss' as *;
+
+.wrapper {
+    @include border-linear-wrapper;
+    width: fit-content;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+
+    input {
+        border: none;
+        background-color: transparent;
+        &:focus-visible {
+            outline: none;
+        }
+    }
+}

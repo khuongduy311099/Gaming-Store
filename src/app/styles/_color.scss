@@ -1,0 +1,9 @@
+$theme-color: #838383;
+$second-color: #7b35c8;
+$border-color: #cccccc;
+$black: #000000;
+$white: #fff;
+$blue: #0098ff;
+
+$primary: linear-gradient(75deg, $blue 0%, $second-color 100%);
+$blue_linear: linear-gradient(90deg, $blue 0%, rgba(0, 152, 255, 0) 100%);

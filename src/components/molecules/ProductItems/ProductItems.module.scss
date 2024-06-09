@@ -1,0 +1,92 @@
+@use '@/app/styles/index.scss' as *;
+
+.item-card-wrapper {
+    @include border-linear-wrapper;
+
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: fit-content;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;
+    .item-name {
+        font-size: 22px;
+        font-weight: 600;
+        a {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+        }
+    }
+
+    .item-type {
+        color: $theme-color;
+        font-size: 14px;
+        text-align: left;
+        width: 100%;
+    }
+
+    .item-image {
+        margin-top: 20px;
+        position: relative;
+        display: block;
+        padding-top: 80%;
+        transition: all ease-in-out 0.6s;
+        -webkit-transition: all ease-in-out 0.6s;
+        width: 200px;
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+            transition: all ease-in-out 0.6s;
+            -webkit-transition: all ease-in-out 0.6s;
+        }
+    }
+
+    .item-filter {
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+        gap: 40px;
+        align-items: flex-start;
+        button {
+            border: 1px solid red;
+            width: 100%;
+        }
+        &::before {
+            z-index: 2;
+        }
+    }
+
+    .item-pricing {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        p {
+            font-weight: 600;
+            display: inline-flex;
+        }
+
+        .discount {
+            font-size: 12px;
+            text-decoration: line-through;
+            color: $theme-color;
+        }
+
+        span {
+            font-size: 10px;
+            display: inline-block;
+        }
+        button {
+            width: 150px;
+        }
+    }
+}

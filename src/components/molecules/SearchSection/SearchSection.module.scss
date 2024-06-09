@@ -1,0 +1,21 @@
+@use '@/app/styles/index.scss' as *;
+.wrapper {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 200px;
+    border-bottom: 0.5px solid gray;
+    input {
+        width: 300px;
+    }
+    p {
+        font-weight: 700;
+    }
+    a {
+        @include underline-item-with-transition;
+        max-width: fit-content;
+        font-weight: 500;
+        cursor: pointer;
+    }
+}

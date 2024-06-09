@@ -1,0 +1,31 @@
+@use '@/app/styles/index.scss' as *;
+
+.cart-section {
+    display: flex;
+    font-size: 13px;
+    width: 100%;
+    gap: 10px;
+    align-items: center;
+}
+
+.icon-wrapper {
+    position: relative;
+    .icon {
+        cursor: pointer;
+    }
+
+    .cart-count {
+        width: 16px;
+        height: 16px;
+        border-radius: 4px;
+        position: absolute;
+        background: $primary;
+        top: -30%;
+        right: -18%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 10px;
+        font-weight: normal;
+    }
+}

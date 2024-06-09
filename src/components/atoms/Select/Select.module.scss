@@ -1,0 +1,51 @@
+@use '@/app/styles/index.scss' as *;
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    svg {
+        position: absolute;
+        right: 10%;
+        pointer-events: none;
+    }
+}
+
+.list-btn {
+    @include border-linear-wrapper;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 35%;
+
+    p {
+        width: 60%;
+        padding: 0 10px;
+    }
+}
+
+.list-options-container {
+    @include border-linear-wrapper;
+    position: absolute;
+    top: 75%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    transition: all 0.5 ease-in;
+    padding: 6px;
+
+    .list-item {
+        cursor: pointer;
+        padding: 4px 10px;
+        border-radius: 6px;
+        text-align: left;
+        display: flex;
+        &:hover {
+            background: $primary;
+        }
+    }
+}

@@ -1,0 +1,63 @@
+@use '@/app/styles/index.scss' as *;
+
+.intro-wrapper {
+    background-image: url('../../../public/intro-background.webp');
+    width: 100vw;
+    height: 540px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    .btn-group {
+        display: flex;
+        gap: 14px;
+
+        button {
+            width: 200px;
+            gap: 10px;
+            align-items: center;
+        }
+    }
+
+    .tagline {
+        display: flex;
+        background-color: #12103e;
+        padding: 10px 15px;
+        color: white;
+        max-width: 500px;
+        margin-bottom: 20px;
+        border-radius: 30px;
+        font-size: 14px;
+        align-items: center;
+        span {
+            padding: 4px 10px;
+            color: white;
+            margin-right: 10px;
+            background: $blue_linear;
+            border-radius: 20px;
+            font-size: 14px;
+            -webkit-border-radius: 20px;
+        }
+
+        a {
+            color: #1c82f3;
+        }
+    }
+    .title {
+        font-size: 50px;
+        line-height: 60px;
+        text-align: center;
+        width: 38%;
+        margin-bottom: 25px;
+    }
+
+    .description {
+        font-size: 14px;
+        text-align: center;
+        width: 38%;
+        margin-bottom: 25px;
+    }
+}

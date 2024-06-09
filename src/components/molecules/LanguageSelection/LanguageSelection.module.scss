@@ -1,0 +1,22 @@
+.icon {
+    cursor: pointer;
+}
+
+.container {
+    position: absolute;
+    top: 53px;
+    right: 19%;
+}
+
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 14px;
+    font-weight: 400;
+    width: 100px;
+
+    a {
+        text-align: left;
+    }
+}

@@ -1,0 +1,32 @@
+@use '@/app/styles/index.scss' as *;
+.modal-wrapper {
+    position: relative;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.modal-inner {
+    position: fixed;
+    margin: auto;
+    inset: 0;
+    background: $primary;
+    padding: 25px;
+    width: fit-content;
+    @include default-item-wrapper;
+}
+
+.modal-title {
+    display: flex;
+    justify-content: space-between;
+
+    svg {
+        cursor: pointer;
+        &:hover {
+            color: $theme-color;
+        }
+    }
+}
